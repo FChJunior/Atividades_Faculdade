@@ -3,9 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reserva</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Reserva de Viagem</h1>
+    </header>
+
+    <section>
+        <form action="get">
+            <!--Dados do Usuário-->
+            <fieldset>
+                <legend>Dados do Usuário</legend>
+                <label>Nome</label>
+                <br>
+                <input type="text" name="nome" required>
+                <br>
+                <label>Email</label>
+                <br>
+                <input type="email" name="email" placeholder="exemplo@dominio.com" required>
+            </fieldset>
+
+            <!--Periodo-->
+            <fieldset>
+                <legend>Periodo</legend>
+                <label>Data de entrada</label>
+                <br>
+                <input type="date" name="entrdada" required>
+                <br>
+                <label>Data de saída</label>
+                <br>
+                <input type="date" name="saida" required>
+                <br>
+            </fieldset>
+
+            <!--Serviços-->
+            <fieldset>
+                <legend>Serviços</legend>
+                <label>
+                    <input type="checkbox" name="passagem" value="passagem">Compra de passagem
+                    <br>
+                </label>
+                <label>
+                    <input type="checkbox" name="hospedagem" value="hospedagem">Reserva no hospedagem
+                    <br>
+                </label>
+                <label>
+                    <input type="checkbox" name="veiculo" value="veiculo">Aluguem de veículo
+                    <br>
+                </label>
+            </fieldset>
+
+            <!--Formas de Pagamento-->
+            <fieldset>
+                <legend>Formas de Pagamento</legend>
+                <label>
+                    <input type="radio" name="Pagamento" value="Pix">Pix
+                    <br>
+                </label>
+                <label>
+                    <input type="radio" name="Pagamento" value="Boleto">Boleto Bancário
+                    <br>
+                </label>
+                <label>
+                    <input type="radio" name="Pagamento" value="Cartão">Cartão de Crédito
+                    <br>
+                </label>
+            </fieldset>
+
+            <!--Prazos de Pagamento-->
+            <fieldset>
+                <legend>Prazos de Pagamento</legend>
+                <select name="prazo" id="" >
+                    <option value="aVista">à Vista</option>
+                    <option value="5x">em 5x sem juros</option>
+                    <option value="10x">em 10x com juros</option>
+                </select>
+            </fieldset>
+
+            <!--Finalizando a reserva-->
+            <fieldset>
+                <legend>Finalizando a reserva</legend>
+                <label>Comentários</label>
+                <br>
+                <textarea name="Comentario" cols="100" rows="10"></textarea>
+                <br>
+                <input type="submit" value="Enviar">
+            </fieldset>
+        </form>
+    </section>
+
+    <footer>
+
+    </footer>
 </body>
 </html>
